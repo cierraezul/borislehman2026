@@ -368,12 +368,10 @@ a { color: inherit; text-underline-offset: 3px; -webkit-tap-highlight-color: tra
   .film p { font-size: 13.5px; line-height: 1.85; }
 }
 @media (max-width: 480px) {
-  .film h3 { font-size: 15px; }
-  .film p { font-size: 12.5px; }
-}
-@media (max-width: 360px) {
-  .films { grid-template-columns: 1fr; }        /* iPhone SE (1st gen) */
-  .film p { font-size: 13px; }
+  /* phones: one film per row — 2 columns left only ~12 characters per line */
+  .films { grid-template-columns: 1fr; gap: 36px; }
+  .film h3 { font-size: 17px; }
+  .film p { font-size: 13.5px; }
 }
 
 /* ---------- 11. Guests + contact ---------- */
