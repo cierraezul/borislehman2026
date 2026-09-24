@@ -5,6 +5,20 @@
    Breakpoints: 1000 (venues → rows) · 900 · 720 (phones) · 480 · 360
    ========================================================================== */
 
+/* ---------- 0. Fonts (self-hosted subsets of Noto Sans JP / Noto Serif JP, SIL OFL 1.1)
+   Only the characters used on this page are included, so every computer shows the same font.
+   After adding text with new kanji, rebuild with tools/build-fonts.sh. ---------- */
+@font-face {
+  font-family: "BL Sans JP";
+  src: url("../fonts/NotoSansJP-subset.woff2") format("woff2");
+  font-weight: 300 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "BL Serif JP";
+  src: url("../fonts/NotoSerifJP-600-subset.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+
 /* ---------- 1. Tokens ---------- */
 :root {
   --ink: #231f20;
@@ -18,8 +32,8 @@
   --burgundy: #7c1c56;
 
   --latin: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-  --mincho: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --jp: "BL Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --mincho: "BL Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
 
   --max: 1080px;
   --gutter: clamp(16px, 4vw, 40px);
@@ -42,7 +56,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "BL Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
   line-height: 1.75;
   line-break: strict;                 /* 強い禁則 */
   -webkit-font-smoothing: antialiased;
