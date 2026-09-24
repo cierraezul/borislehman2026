@@ -47,10 +47,13 @@
     if (!last || last.nodeType !== 3) return;          // ends with an element (already protected)
     var text = last.textContent.replace(/\s+$/, '');
     if (text.length <= MIN) return;
+    // never let the glued part start with punctuation / small kana / ー (no line may begin with them)
+    var cut = text.length - MIN;
+    while (cut > 0 && /[、。，．」』）】ー…ぁぃぅぇぉっゃゅょァィゥェォッャュョ]/.test(text.charAt(cut))) cut--;
     var tail = document.createElement('span');
     tail.className = 'nb';
-    tail.textContent = text.slice(-MIN);
-    last.textContent = text.slice(0, -MIN);
+    tail.textContent = text.slice(cut);
+    last.textContent = text.slice(0, cut);
     p.insertBefore(tail, last.nextSibling);
   });
 })();
