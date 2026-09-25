@@ -10,12 +10,12 @@
    After adding text with new kanji, rebuild with tools/build-fonts.sh. ---------- */
 @font-face {
   font-family: "BL Sans JP";
-  src: url("../fonts/NotoSansJP-subset.woff2") format("woff2");
+  src: url("../fonts/NotoSansJP-subset.woff2?v=2") format("woff2");
   font-weight: 300 700; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "BL Serif JP";
-  src: url("../fonts/NotoSerifJP-600-subset.woff2") format("woff2");
+  src: url("../fonts/NotoSerifJP-600-subset.woff2?v=2") format("woff2");
   font-weight: 600; font-style: normal; font-display: swap;
 }
 
@@ -206,11 +206,11 @@ a { color: inherit; text-underline-offset: 3px; -webkit-tap-highlight-color: tra
 
 /* band 2: short Mekas quote — proportions measured from the v2 flyer */
 .band__quote {
-  position: absolute; left: 1.2%; top: 37.2%; width: 57.4%; height: 45.2%; margin: 0;
-  display: flex; align-items: center; padding-left: 3.35cqw;
+  position: absolute; left: 1.6%; top: 38.1%; width: 44.9%; height: 39.4%; margin: 0;
+  display: flex; align-items: center; padding-left: 2.97cqw;
   background: rgba(35, 31, 32, .22);
 }
-.band__quote p { margin: 0; white-space: nowrap; font-weight: 500; font-size: 4.65cqw; line-height: 1.2; }
+.band__quote p { margin: 0; white-space: nowrap; font-weight: 500; font-size: 3.49cqw; line-height: 1.2; }
 
 /* band 3: credits */
 .band__credits {
