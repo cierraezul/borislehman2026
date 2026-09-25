@@ -81,6 +81,7 @@ a { color: inherit; text-underline-offset: 3px; -webkit-tap-highlight-color: tra
 
 .en { font-family: var(--latin); font-weight: 700; letter-spacing: .01em; }
 .nb { display: inline-block; }       /* a line may only break between .nb chunks */
+.nw { white-space: nowrap; }         /* never break inside (names, titles) */
 
 /* ―― must join into one line: Latin fonts leave a gap between the two bars */
 .dash { font-family: var(--jp); letter-spacing: 0; white-space: nowrap; }
